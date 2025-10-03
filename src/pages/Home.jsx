@@ -24,44 +24,11 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Morning Star Matriculation School | Best School in Thanjavur Since 1994</title>
-
+        <title>🌟 Morning Star Matriculation School – Thanjavur</title>
         <meta
           name="description"
-          content="Discover why Morning Star Matriculation School (MSMS) is recognized as the best school in Thanjavur. Academic excellence and holistic development since 1994."
+          content="Shaping young minds with values, knowledge, and creativity. MSMS offers holistic education, modern facilities, and dedicated teachers to build confident, future-ready students."
         />
-        <meta
-          name="keywords"
-          content="best school in Thanjavur, schools in  Rajagopalasamy Kovil Street, Thanjavur, top school near me, matriculation school Thanjavur, matriculation school in Thanjavur, education Thanjavur, admissions open Thanjavur school, Top 10 school in thanjavur"
-        />
-
-        {/* Open Graph Meta */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.msmstj.in/" />
-        <meta property="og:title" content="Morning Star Matriculation School | Best School in Thanjavur" />
-        <meta
-          property="og:description"
-          content="Join the best school in Thanjavur — Morning Star Matriculation School. Shaping future-ready leaders through academic excellence and holistic growth."
-        />
-        <meta
-          property="og:image"
-          content="https://www.msmstj.in/assets/images/msms-og-image.jpg"
-        />
-
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://www.msmstj.in/" />
-        <meta name="twitter:title" content="Morning Star Matriculation School | Best School in Thanjavur" />
-        <meta
-          name="twitter:description"
-          content="Explore Morning Star Matriculation School, the best school in Thanjavur for students to grow academically, creatively, and personally."
-        />
-        <meta
-          name="twitter:image"
-          content="https://www.msmstj.in/assets/images/msms-og-image.jpg"
-        />
-
-        <link rel="canonical" href="https://www.msmstj.in/" />
       </Helmet>
 
       <Header />
