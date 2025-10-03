@@ -1,0 +1,110 @@
+.gridWrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+  gap: 1.5rem;
+  /* margin-top: 2rem; */
+  padding: 2rem;
+}
+
+.gridItem {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 655px; /* Fixed height for all items */
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.embedWrapper iframe,
+.image {
+  width: 100%;
+  height: 100%; /* Ensure the content fills the container */
+  object-fit: cover; /* Crops the content to maintain consistency */
+}
+
+.embedWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%; /* Fill the entire grid item */
+}
+
+.gridDescription {
+  font-size: 1rem;
+  color: #333;
+  padding: 1rem;
+  background-color: #fafafa;
+  border-top: 1px solid #ddd;
+}
+
+.gridTitle {
+  font-size: 2rem;
+  text-align: center;
+  color: #222;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .gridItem{
+    height: 450px;
+  }
+  .gridWrapper {
+    grid-template-columns: 1fr; /* Stack items in one column on smaller screens */
+  }
+
+  .embedWrapper iframe {
+    height: 450px; /* Adjust height for smaller screens */
+  }
+
+  .gridDescription {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+}
+
+.flexContainer {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  flex-wrap: wrap; /* Adjust for responsive design */
+}
+
+.leftContainer {
+  flex: 1;
+  max-width: 60%; /* Adjust to balance the layout */
+  padding: 0 50px;
+}
+
+.rightContainer {
+  flex: 1;
+  max-width: 40%; /* Adjust to balance the layout */
+}
+
+
+.image {
+  width: 100%;
+  height: 900px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(27, 6, 6, 0.1);
+}
+
+@media (max-width: 768px) {
+  .flexContainer {
+    flex-direction: column; /* Stack the content and image vertically */
+  }
+
+  .leftContainer {
+    order: 1; /* Ensure the content stays first */
+    max-width: 100%; /* Take up full width on smaller screens */
+    padding: 0;
+  }
+
+  .rightContainer {
+    order: 2; /* Ensure the image comes second */
+    max-width: 100%; /* Take up full width on smaller screens */
+    margin-top: 20px; /* Add some space between the content and image */
+  }
+  .image{
+    height: 300px;
+  }
+}

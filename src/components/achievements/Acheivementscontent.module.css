@@ -1,0 +1,193 @@
+.achievementsSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 60px 55px;
+  background-color: #f9f9f9;
+}
+
+.content {
+  flex: 1;
+}
+
+.title {
+  font-size: 1.8rem;
+  color: #0f1c4d;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  position: relative;
+  line-height: 1.3;
+}
+
+.highlight {
+  position: relative;
+  display: inline-block;
+}
+
+.highlight img {
+  position: absolute;
+  bottom: -10px;
+  left: -5px;
+  width: 175px;
+  height: auto;
+  pointer-events: none;
+   z-index: 9; /* adjust here */
+}
+
+
+.label {
+  display: inline-block;
+  background: #eae6fb;
+  color: #6b4ce6;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+
+.heading {
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+  color: #222;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 16px;
+}
+
+.list {
+  list-style-type: none;
+  padding-left: 20px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.imageWrapper {
+  flex: 1;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+@media (min-width: 1200px) {
+  .achievementsSection {
+    padding: 80px 100px;
+    gap: 60px;
+  }
+
+  .heading {
+    font-size: 2.6rem;
+  }
+
+  .description {
+    font-size: 1.2rem;
+  }
+}
+
+/* 992px - 1199px (small desktops & laptops) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .achievementsSection {
+    padding: 60px 40px;
+    gap: 40px;
+  }
+
+  .heading {
+    font-size: 2.2rem;
+  }
+
+  .description {
+    font-size: 1.1rem;
+  }
+}
+
+/* 768px - 991px (tablets) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .achievementsSection {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 30px;
+  }
+
+  .imageWrapper {
+    order: -1;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .list {
+    text-align: left;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  .achievementsSection {
+    flex-direction: column;
+    text-align: center;
+    padding: 45px 25px;
+    gap: 28px;
+  }
+
+  .imageWrapper {
+    order: -1;
+  }
+
+  .heading {
+    font-size: 1.9rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .list {
+    padding-left: 18px;
+    font-size: 0.95rem;
+  }
+
+  .highlight img {
+    width: 140px;
+    bottom: -6px;
+    left: -3px;
+  }
+}
+/* <576px (mobile phones) */
+@media (max-width: 575px) {
+  .achievementsSection {
+    flex-direction: column;
+    text-align: left;
+    padding: 40px 20px;
+    gap: 24px;
+  }
+
+  .heading {
+    font-size: 1.8rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+  }
+
+  .list {
+    padding-left: 15px;
+    font-size: 0.9rem;
+  }
+
+  .highlight img {
+   display: none;
+  }
+}

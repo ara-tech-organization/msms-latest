@@ -1,0 +1,304 @@
+.contactSection {
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+.contactCard {
+  background: #fff;
+  display: flex;
+  flex-direction: column; /* <-- THIS makes iframe go BOTTOM ALWAYS */
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 1100px;
+  width: 100%;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.topContent {
+  display: flex;
+  flex-direction: row; /* Keeps LEFT and RIGHT PANELS side by side */
+}
+
+.leftPanel {
+  width: 50%;
+  background-color: #f7f7f7;
+  background-image: url('../../../public/images/contact.png');
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 300px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.infoContent h2 {
+  color: #172b4d;
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.description {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.infoCard {
+    position: relative;
+    top: 40px;
+  background: #fff;
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+}
+
+.infoBlock {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.icon {
+  color: #ff5e5e;
+  font-size: 1.4rem;
+  margin-top: 4px;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #aaa;
+}
+
+.bold {
+  font-weight: 600;
+  font-size: 14px;
+  color: #1a1a1a;
+}
+
+.subNote {
+  font-size: 12px;
+  color: #666;
+}
+
+.customerCare {
+  margin-top: 80px;
+  color: white;
+  font-size: 14px;
+  /* background: #6e57e0; */
+  padding: 8px 16px;
+  border-radius: 6px;
+  width: fit-content;
+}
+
+.socialIcons {
+  margin-top: 16px;
+  display: flex;
+  gap: 14px;
+  color: #888;
+  font-size: 16px;
+  justify-content: flex-end; /* This sends the icons to the RIGHT */
+}
+
+.rightPanel {
+  width: 50%;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+}
+
+.form input,
+.form textarea {
+  padding: 10px 14px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.form button {
+  background: #6e57e0;
+  color: white;
+  border: none;
+  padding: 10px 0;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.form button:hover {
+  background: #5847c2;
+}
+
+.iframeWrapper {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  margin-top: 50px;
+  border-top: 1px solid #eee;
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalBox {
+  background: #fff;
+  padding: 24px 32px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 300px;
+  width: 90%;
+}
+
+.modalBox p {
+  font-size: 16px;
+  margin-bottom: 16px;
+  color: #1e6f72;
+}
+
+.modalBox button {
+  background-color: #1e6f72;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
+@media (max-width: 575px) {
+  .topContent {
+    flex-direction: column;
+  }
+
+  .leftPanel,
+  .rightPanel {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .leftPanel {
+    background-size: 200px;
+    background-position: center bottom;
+    background-image: none;
+
+  }
+
+  .socialIcons {
+    justify-content: center;
+    display: none;
+  }
+
+  .iframeWrapper {
+    height: 200px;
+  }
+}
+
+/* 576px - 767px - Phones landscape / small tablets */
+@media (min-width: 576px) and (max-width: 767px) {
+  .topContent {
+    flex-direction: column;
+  }
+
+  .leftPanel,
+  .rightPanel {
+    width: 100%;
+    padding: 30px;
+  }
+
+  .leftPanel {
+    background-size: 250px;
+    background-position: center bottom;
+     background-image: none;
+  }
+
+  .iframeWrapper {
+    height: 220px;
+  }
+}
+
+/* 768px - 991px - Tablets portrait/landscape */
+@media (min-width: 768px) and (max-width: 991px) {
+  .topContent {
+    flex-direction: column;
+  }
+
+  .leftPanel,
+  .rightPanel {
+    width: 100%;
+    padding: 40px;
+  }
+
+  .leftPanel {
+    background-size: 280px;
+    background-position: center bottom;
+     background-image: none;
+  }
+
+  .iframeWrapper {
+    height: 250px;
+  }
+   .socialIcons {
+    justify-content: center;
+    display: none;
+  }
+}
+
+/* 992px - 1199px - Small laptops/desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .topContent {
+    flex-direction: row;
+  }
+
+  .leftPanel,
+  .rightPanel {
+    width: 50%;
+    padding: 40px;
+  }
+
+  .leftPanel {
+    background-size: 300px;
+    background-position: left bottom;
+  }
+
+  .iframeWrapper {
+    height: 250px;
+  }
+}
+
+/* 1200px - 1399px - Large desktops (You can tweak this separately if needed) */
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .leftPanel {
+    background-size: 320px;
+  }
+}

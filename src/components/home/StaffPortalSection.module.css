@@ -1,0 +1,199 @@
+/* Base Styles - already defined */
+
+.facilitiesSection {
+  position: relative;
+  background: url('../../assets/images/map.jpg');
+  color: #fff;
+  padding: 4rem 2rem;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(43, 16, 85, 0.5));
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 2rem;
+  padding: 0 150px;
+}
+
+.left {
+  flex: 1 1 45%;
+}
+
+.left h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.left p{
+  margin-bottom: 1rem;
+}
+
+.left ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.left ul li {
+  margin-bottom: 0.75rem;
+}
+
+.left ul span {
+  color: #ff3176;
+  margin-right: 0.5rem;
+}
+
+.ctaButton {
+  margin-top: 1rem;
+  padding: 0.75rem 2rem;
+  background-color: #ff3176;
+  border: none;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 49, 118, 0.3);
+}
+
+.ctaButton:hover {
+  background-color: #e91e63; /* Slightly darker on hover */
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 49, 118, 0.5);
+}
+
+
+.right {
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.circleGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  max-width: 400px;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #0f1c4d;
+  background: #ff7a59;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.circle1 { background: #ff6b6b; }
+.circle2 { background: #ff9f43; }
+.circle3 { background: #1dd1a1; }
+.circle4 { background: #48dbfb; }
+.circle5 { background: #f368e0; }
+.circle6 { background: #576574; }
+
+@media (max-width: 575.98px) {
+  .container {
+    flex-direction: column;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .left h2 {
+    font-size: 1.5rem;
+  }
+
+  .circle {
+    width: 100px;
+    height: 100px;
+    font-size: 0.5rem;
+  }
+
+  .circleGrid {
+    gap: 0.8rem;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .container {
+    flex-direction: column;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .circle {
+    width: 120px;
+    height: 120px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .container {
+    flex-direction: row;
+    padding: 2rem 4rem;
+  }
+
+  .left h2 {
+    font-size: 2rem;
+  }
+
+  .circle {
+    width: 120px;
+    height: 120px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .container {
+    padding: 2rem 6rem;
+  }
+
+  .circle {
+    width: 110px;
+    height: 110px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .container {
+    padding: 2rem 10rem;
+  }
+
+  .circle {
+    width: 115px;
+    height: 115px;
+  }
+}
+
+
+/* @media (min-width: 1400px) {
+  .container {
+    padding: 2rem 12rem;
+  }
+
+  .circle {
+    width: 130px;
+    height: 130px;
+    font-size: 1rem;
+  }
+} */

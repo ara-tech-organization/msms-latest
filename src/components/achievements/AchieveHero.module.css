@@ -1,0 +1,213 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #f9f6f9 0%, #e7e9fc 100%);
+  overflow: hidden;
+}
+
+.content {
+  text-align: center;
+}
+
+.content h1 {
+  color: #0d1b2a;
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.content p {
+  color: #6c757d;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.homeLink {
+  color: #ff5722;
+  cursor: pointer;
+}
+
+.separator {
+  margin: 0 4px;
+  color: #ff5722;
+}
+
+/* Decorative images positioning - base (desktop ~1200px+) */
+.decor1 {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  width: 50px;
+  height: auto;
+}
+
+.decor2 {
+  position: absolute;
+  top: 60px;
+  right: 80px;
+  width: 40px;
+  height: auto;
+}
+
+.decor3 {
+  position: absolute;
+  bottom: 40px;
+  left: 420px;
+  width: 55px;
+  height: auto;
+}
+
+.decor4 {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  width: 45px;
+  height: auto;
+}
+
+/* < 576px (mobile) */
+@media (max-width: 575.98px) {
+  .hero {
+    height: 220px;
+  }
+
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .content p {
+    font-size: 0.8rem;
+  }
+
+  .decor1 {
+    top: 10px;
+    left: 10px;
+    width: 30px;
+  }
+
+  .decor2 {
+    top: 30px;
+    right: 20px;
+    width: 25px;
+  }
+
+  .decor3 {
+    bottom: 20px;
+    left: 40px;
+    width: 30px;
+  }
+
+  .decor4 {
+    bottom: 10px;
+    right: 10px;
+    width: 30px;
+  }
+}
+
+/* 768px - 991px (Tablet) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .hero {
+    height: 260px;
+  }
+
+  .content h1 {
+    font-size: 2.5rem;
+  }
+
+  .decor1 {
+    top: 15px;
+    left: 25px;
+    width: 40px;
+  }
+
+  .decor2 {
+    top: 50px;
+    right: 50px;
+    width: 35px;
+  }
+
+  .decor3 {
+    bottom: 30px;
+    left: 180px;
+    width: 45px;
+  }
+
+  .decor4 {
+    bottom: 15px;
+    right: 25px;
+    width: 40px;
+  }
+}
+
+/* 992px - 1199px (Small Desktop) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .hero {
+    height: 280px;
+  }
+
+  .content h1 {
+    font-size: 2.7rem;
+  }
+
+  .decor1 {
+    top: 20px;
+    left: 30px;
+    width: 45px;
+  }
+
+  .decor2 {
+    top: 55px;
+    right: 60px;
+    width: 38px;
+  }
+
+  .decor3 {
+    bottom: 35px;
+    left: 300px;
+    width: 50px;
+  }
+
+  .decor4 {
+    bottom: 15px;
+    right: 20px;
+    width: 42px;
+  }
+}
+
+/* 1200px - 1399px (Large Desktop) */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .hero {
+    height: 300px;
+  }
+
+  .content h1 {
+    font-size: 3rem;
+  }
+
+  .decor1 {
+    top: 20px;
+    left: 40px;
+    width: 50px;
+  }
+
+  .decor2 {
+    top: 60px;
+    right: 80px;
+    width: 40px;
+  }
+
+  .decor3 {
+    bottom: 40px;
+    left: 350px;
+    width: 55px;
+  }
+
+  .decor4 {
+    bottom: 20px;
+    right: 30px;
+    width: 45px;
+  }
+}

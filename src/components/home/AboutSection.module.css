@@ -1,0 +1,266 @@
+.about {
+  position: relative;
+  background-color: #fff;
+  padding: 1rem 1rem;
+  overflow: hidden;
+  margin: 2rem 0px;
+}
+
+.starIcon {
+  /* position: absolute; */
+  top: 1rem;
+  right: 1rem;
+  width: 40px;
+  z-index: 99;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  /* gap: 2rem; */
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.imageGrid {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  gap: 0px; /* Remove space between image1 and image2 */
+  justify-content: center;
+  align-items: center;
+  column-gap: 4px; /* Optional fine-tuned space */
+  row-gap: 8px;
+}
+
+
+.imgTopLeft {
+  grid-column: 1;
+  grid-row: 1;
+  width: 100%;
+  max-width: 200px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.imgTopRight {
+  grid-column: 2;
+  grid-row: 1;
+  width: 100%;
+  max-width: 200px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.imgBottom {
+  grid-column: 1 / span 2;
+  grid-row: 2;
+  width: 100%;
+  height: auto;
+  max-width: 420px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.experienceBadge {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fdd835;
+  color: #000;
+  font-weight: bold;
+  font-size: 1.25rem;
+  padding: 1.5rem;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 1.2;
+  z-index: 2;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.experienceBadge span {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: normal;
+  margin-top: 0.25rem;
+}
+
+
+.dotPattern {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  opacity: 0.3;
+}
+
+.content {
+  text-align: left;
+  padding: 0 1rem;
+}
+
+.label {
+  display: inline-block;
+  background: #eae6fb;
+  color: #6b4ce6;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 1.8rem;
+  color: #0f1c4d;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  position: relative;
+  line-height: 1.3;
+}
+
+.highlight {
+  position: relative;
+  display: inline-block;
+}
+
+.highlight img {
+  position: absolute;
+  bottom: -10px;
+  left: -15px;
+  width: 185px;
+  height: auto;
+  pointer-events: none;
+   z-index: 9; /* adjust here */
+}
+
+
+.description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.features h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0f1c4d;
+  margin-bottom: 0.5rem;
+}
+
+.features p {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.cta {
+  background: #1e6f72;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.cta .arrow {
+  display: inline-block;
+  transition: transform 0.3s ease, font-size 0.3s ease;
+  font-size: 1rem;
+}
+
+.cta:hover {
+  background: #3c8f92;
+  transform: scale(1.05);
+}
+
+.cta:hover .arrow {
+  transform: translateX(5px) scale(1.2);
+  color: #fff;
+}
+
+
+/* Breakpoints */
+
+@media (max-width: 575px) {
+  .imageGrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+  }
+
+  .imgTopLeft,
+  .imgTopRight,
+  .imgBottom {
+    max-width: 100%;
+  }
+
+  .experienceBadge {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .content{
+    margin-top: 2rem;
+  }
+  .highlight img{
+    display: none;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .features {
+    flex-direction: row;
+    gap: 2rem;
+  }
+  
+}
+
+@media (min-width: 992px) {
+  .container {
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .imageGrid,
+  .content {
+    flex: 1;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .title {
+    font-size: 3rem;
+  }
+
+  .experienceBadge {
+    font-size: 1.75rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    gap: 5rem;
+  }
+}

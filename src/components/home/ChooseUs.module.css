@@ -1,0 +1,580 @@
+/* ====== Container & Layout ====== */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    margin: 0 auto;
+    box-sizing: border-box;
+    position: relative;
+    margin-top: 25px;
+    gap: 40px;
+}
+
+.left {
+    flex: 1 1 50%;
+    max-width: 600px;
+    position: relative;
+    /* for curved lines absolute positioning */
+}
+
+.right {
+    flex: 1 1 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* margin-left: 2rem; */
+}
+
+/* ====== Subtitle, Title, Description ====== */
+.subtitle {
+    display: inline-block;
+    background-color: rgba(128, 90, 213, 0.1);
+    color: #805ad5;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    margin-bottom: 0rem;
+    letter-spacing: 0.5px;
+}
+
+/* Curved lines decoration above the title */
+.curvedLines {
+    position: absolute;
+    /*
+    Initial guess: place it relative to .left.
+    Adjust top/left or top/right as needed.
+    Example: top: 2rem above the title, and slightly right offset.
+  */
+    top: 1.5rem;
+    /* adjust */
+    left: 50%;
+    /* use percentage to center roughly; adjust */
+    transform: translateX(-50%);
+    width: 100px;
+    /* adjust size to match design */
+    height: auto;
+    z-index: 1;
+    opacity: 0.7;
+    /* if you want slight transparency */
+    pointer-events: none;
+}
+
+.title {
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #1a202c;
+    margin: 2.5rem 0 1rem 0;
+    /* add top margin so curved lines fit above */
+    position: relative;
+}
+
+.highlight {
+    position: relative;
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border: 2px solid #805ad5;
+    border-radius: 999px;
+    color: #1a202c;
+    background-color: #ffffff;
+}
+
+.description {
+    color: #4a5568;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+/* ====== Feature Cards ====== */
+.featuresGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.featureCard {
+    display: flex;
+    align-items: flex-start;
+    background-color: rgba(128, 90, 213, 0.1);
+    border-radius: 8px;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.iconWrapper {
+    flex-shrink: 0;
+    margin-right: 0.75rem;
+}
+
+.checkIcon {
+    font-size: 1.25rem;
+    color: #805ad5;
+    line-height: 1;
+}
+
+.featureText {
+    flex: 1;
+}
+
+.featureTitle {
+    font-size: 1rem;
+    margin: 0 0 0.25rem 0;
+    font-weight: 600;
+    color: #1a202c;
+}
+
+.featureDescription {
+    font-size: 0.875rem;
+    color: #4a5568;
+    margin: 0;
+}
+
+/* ====== Image Wrapper & Decorations ====== */
+.imageWrapper {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Dotted pattern behind image (unchanged) */
+.dottedPattern {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 420px;
+    height: 420px;
+    pointer-events: none;
+    background-image: radial-gradient(#007bff 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.6;
+    z-index: 1;
+}
+
+/* Floating decorative lines (unchanged) */
+.floatingLine1,
+.floatingLine2 {
+    position: absolute;
+    background-color: #FFD54F;
+    z-index: 2;
+}
+
+.floatingLine1 {
+    width: 60px;
+    height: 6px;
+    top: 10px;
+    left: -10px;
+    transform: rotate(15deg);
+}
+
+.floatingLine2 {
+    width: 40px;
+    height: 6px;
+    bottom: -10px;
+    right: 10px;
+    transform: rotate(-25deg);
+}
+
+/* Yellow corner decorations using images */
+.yellowTopLeft {
+    position: absolute;
+    top: -10px;
+    /* adjust so it sits partly behind the main image, matching reference */
+    left: -10px;
+    /* adjust */
+    width: 80px;
+    /* adjust length of the yellow accent */
+    height: auto;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.yellowBottomRight {
+    position: absolute;
+    bottom: -10px;
+    /* adjust */
+    right: -10px;
+    /* adjust */
+    width: 80px;
+    /* match top-left or adjust separately if needed */
+    height: auto;
+    transform: rotate(180deg);
+    /* if the same asset but you want mirrored orientation */
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Main image */
+.image {
+  display: block;
+  width: 100%;
+  height: 600px;
+  object-fit: cover;              /* Ensures video covers the area like an image */
+  position: relative;
+  z-index: 3;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ====== Responsive Breakpoints ====== */
+
+/* <576px: stack columns vertically, hide or shrink decorations */
+@media (max-width: 575px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 2rem;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+        max-width: none;
+    }
+
+    .right {
+        margin-top: 2rem;
+    }
+
+    .featuresGrid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Hide curved lines if overlaps badly */
+    .curvedLines {
+        display: none;
+    }
+
+    /* Hide or shrink yellow corners */
+    .yellowTopLeft,
+    .yellowBottomRight {
+        display: none;
+    }
+
+    /* Optionally hide dottedPattern and floating lines */
+    .dottedPattern,
+    .floatingLine1,
+    .floatingLine2 {
+        display: none;
+    }
+
+    .image{
+        height: 350px !important;
+    }
+}
+
+/* 576px–767px: still stacked; show smaller decorations */
+@media (min-width: 576px) and (max-width: 767px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+        max-width: none;
+    }
+
+    .right {
+        margin-top: 2rem;
+    }
+
+    .featuresGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .curvedLines {
+        display: block;
+        top: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        /* smaller */
+    }
+
+    .yellowTopLeft,
+    .yellowBottomRight {
+        width: 50px;
+        /* smaller accent */
+        top: -5px;
+        left: -5px;
+        bottom: -5px;
+        right: -5px;
+    }
+
+    .yellowBottomRight {
+        transform: rotate(180deg);
+    }
+
+    .dottedPattern {
+        display: block;
+        top: -15px;
+        right: -15px;
+        width: 80px;
+        height: 80px;
+        background-size: 6px 6px;
+    }
+
+    .floatingLine1 {
+        width: 40px;
+        height: 5px;
+        top: 5px;
+        left: 0px;
+        transform: rotate(10deg);
+    }
+
+    .floatingLine2 {
+        width: 30px;
+        height: 5px;
+        bottom: 0px;
+        right: 0px;
+        transform: rotate(-20deg);
+    }
+
+     .image{
+        height: 300px !important;
+    }
+}
+
+/* 768px–991px: side-by-side, moderate decorations */
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+    flex-direction: column;
+    align-items: center; /* This ensures vertical centering */
+  }
+
+  .left {
+    flex: 1 1 45%;
+  }
+
+  .right {
+    flex: 1 1 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Vertical centering */
+    margin: 2rem 0rem;
+
+  }
+
+    .featuresGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+
+    .curvedLines {
+        top: 1.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90px;
+    }
+
+    .yellowTopLeft {
+        top: -8px;
+        left: -8px;
+        width: 60px;
+    }
+
+    .yellowBottomRight {
+        bottom: -8px;
+        right: -8px;
+        width: 60px;
+        transform: rotate(180deg);
+    }
+
+    .dottedPattern {
+        top: -20px;
+        right: -20px;
+        width: 100px;
+        height: 100px;
+        background-size: 7px 7px;
+    }
+
+    .floatingLine1 {
+        width: 50px;
+        height: 5px;
+        top: 5px;
+        left: -5px;
+        transform: rotate(12deg);
+    }
+
+    .floatingLine2 {
+        width: 35px;
+        height: 5px;
+        bottom: -5px;
+        right: 5px;
+        transform: rotate(-22deg);
+    }
+
+     .image{
+        height: 350px !important;
+    }
+}
+
+/* 992px–1199px: default desktop */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .curvedLines {
+        top: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+    }
+
+    .yellowTopLeft {
+        top: -10px;
+        left: -10px;
+        width: 80px;
+    }
+
+    .yellowBottomRight {
+        bottom: -10px;
+        right: -10px;
+        width: 80px;
+        transform: rotate(180deg);
+    }
+
+    .dottedPattern {
+        top: -20px;
+        right: -20px;
+        width: 120px;
+        height: 120px;
+        background-size: 8px 8px;
+    }
+
+    .floatingLine1 {
+        width: 60px;
+        height: 6px;
+        top: 10px;
+        left: -10px;
+        transform: rotate(15deg);
+    }
+
+    .floatingLine2 {
+        width: 40px;
+        height: 6px;
+        bottom: -10px;
+        right: 10px;
+        transform: rotate(-25deg);
+    }
+
+     .image{
+        height: 700px !important;
+    }
+}
+
+/* 1200px–1399px: wider desktop */
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .container {
+        max-width: 1140px;
+        align-items: center;
+        padding: 2.5rem;
+    }
+
+    .curvedLines {
+        top: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 110px;
+    }
+
+    .yellowTopLeft {
+        top: -12px;
+        left: -12px;
+        width: 90px;
+    }
+
+    .yellowBottomRight {
+        bottom: -12px;
+        right: -12px;
+        width: 90px;
+        transform: rotate(180deg);
+    }
+
+    .dottedPattern {
+        top: -35px;
+        right: -25px;
+        width: 240px;
+        height: 240px;
+        background-size: 9px 9px;
+    }
+
+    .floatingLine1 {
+        width: 70px;
+        height: 6px;
+        top: 12px;
+        left: -12px;
+        transform: rotate(17deg);
+    }
+
+    .floatingLine2 {
+        width: 45px;
+        height: 6px;
+        bottom: -12px;
+        right: 12px;
+        transform: rotate(-27deg);
+    }
+}
+
+/* >=1400px: extra wide screens */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+        align-items: center;
+        padding: 3rem;
+    }
+
+    .curvedLines {
+        top: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 120px;
+    }
+
+    .yellowTopLeft {
+        top: -15px;
+        left: -15px;
+        width: 100px;
+    }
+
+    .yellowBottomRight {
+        bottom: -15px;
+        right: -15px;
+        width: 100px;
+        transform: rotate(180deg);
+    }
+
+    .dottedPattern {
+        top: -30px;
+        right: -30px;
+        width: 260px;
+        height: 260px;
+        background-size: 10px 10px;
+    }
+
+    .floatingLine1 {
+        width: 80px;
+        height: 7px;
+        top: 15px;
+        left: -15px;
+        transform: rotate(18deg);
+    }
+
+    .floatingLine2 {
+        width: 50px;
+        height: 7px;
+        bottom: -15px;
+        right: 15px;
+        transform: rotate(-28deg);
+    }
+}

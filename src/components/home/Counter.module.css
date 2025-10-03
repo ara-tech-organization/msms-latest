@@ -1,0 +1,283 @@
+.wrapper {
+  background-color: #f5f7fc; /* fallback color */
+  background: url('../../assets/images/Background.png') center/cover no-repeat;
+  position: relative;
+  padding: 4rem 2rem;
+  overflow-x: hidden;
+}
+
+.statsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  background-color: #f24d30;
+  border-radius: 60px;
+  padding: 2rem 3rem;
+  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+  max-width: 1200px;  /* sets a maximum width */
+  width: 100%;
+  margin: 0 auto;     /* centers the container horizontally */
+}
+
+.statsContainer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('../../assets/images/worldmap.png') center/cover no-repeat;
+
+}
+
+
+.statItem {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-align: left;
+  z-index: 2;
+  min-width: 220px;
+  gap: 1rem;
+}
+
+.iconWrapper {
+  background-color: #fff;
+  padding: 0.8rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f24c30;
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.statText {
+  display: flex;
+  flex-direction: column;
+}
+
+.value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #0d1b2a;
+  margin: 0;
+}
+
+.label {
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+  color: #fff;
+}
+
+.testimonialSection {
+  text-align: center;
+  margin-top: 4rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1.5rem;
+}
+
+.subheading {
+  text-transform: uppercase;
+  color: #9b5de5;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.heading {
+  font-size: 2rem;
+  color: #0d1b2a;
+  font-weight: 700;
+  margin-bottom: 5rem;
+}
+
+/* .testimonialGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+} */
+
+.testimonialCard {
+  background: #fff;
+  padding: 2rem 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  position: relative;
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  overflow: visible; /* <== allows children to overflow the card */
+}
+
+.quoteIcon {
+  position: absolute;
+  top: -2rem;  /* pull it above the card */
+  left: -1rem;
+  font-size: 3rem;
+  color: #d0d0d0;
+  z-index: 9;
+}
+
+.quote {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 10; /* make sure text is above background stuff */
+}
+
+
+.name {
+  font-weight: 700;
+  color: #0d1b2a;
+  margin-bottom: 0.3rem;
+}
+
+.title {
+  color: #9ca3af;
+  font-size: 0.85rem;
+}
+
+.testimonialGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+
+/* Breakpoint 1: Extra small devices (phones, <576px) */
+@media (max-width: 575.98px) {
+  .wrapper {
+    padding: 2rem 1rem;
+  }
+
+  .statsContainer {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1.2rem;
+    gap: 1.5rem;
+    border-radius: 30px;
+  }
+
+  .statItem {
+    text-align: start;
+    justify-content: flex-start;
+  }
+
+  .value {
+    font-size: 1.5rem;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .testimonialGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonialCard {
+    padding: 1.5rem 1rem;
+  }
+}
+
+/* Breakpoint 2: Small devices (phones, 576px - 767px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .wrapper {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .statsContainer {
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .statItem {
+    min-width: 180px;
+  }
+
+  .value {
+    font-size: 1.6rem;
+  }
+
+  .heading {
+    font-size: 1.8rem;
+  }
+
+  .testimonialGrid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+/* Breakpoint 3: Medium devices (tablets, 768px - 991px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .wrapper {
+    padding: 3rem 2rem;
+  }
+
+  .statsContainer {
+    gap: 2.5rem;
+    padding: 2rem 2.5rem;
+  }
+
+  .value {
+    font-size: 1.7rem;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .testimonialGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Breakpoint 4: Large devices (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .wrapper {
+    padding: 4rem 2rem;
+  }
+
+  .statsContainer {
+    gap: 2.8rem;
+    padding: 2rem 3rem;
+  }
+
+  .value {
+    font-size: 1.8rem;
+  }
+
+  .heading {
+    font-size: 2.2rem;
+  }
+
+  .testimonialGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Breakpoint 5: Extra large devices (1200px - 1399px) */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .wrapper {
+    padding: 4rem 3rem;
+  }
+
+  .statsContainer {
+    gap: 3rem;
+  }
+
+  .value {
+    font-size: 2rem;
+  }
+
+  .heading {
+    font-size: 2.4rem;
+  }
+}
+

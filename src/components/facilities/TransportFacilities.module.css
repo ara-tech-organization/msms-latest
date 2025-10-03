@@ -1,0 +1,171 @@
+.transportSection {
+  padding: 4rem 4.5rem;
+  background-color: #f9fbfc;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.leftContent {
+  flex: 1 1 500px;
+}
+
+.heading {
+  font-size: 2rem;
+  color: #1e6f72;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.routeList {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  color: #333;
+}
+
+.routeList li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.rightImage {
+  flex: 1 1 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.singleImage {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+
+.imageTop,
+.imageBottom {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.tableHeading {
+  font-size: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #1e6f72;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+}
+
+.routesTable {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.routesTable th,
+.routesTable td {
+  padding: 1rem;
+  text-align: left;
+  font-size: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.routesTable th {
+  background-color: #e8f6f7;
+  color: #1e6f72;
+  font-weight: 600;
+}
+
+.routesTable tr:last-child td {
+  border-bottom: none;
+}
+
+.listings{
+  list-style-type: none;
+}
+
+@media (max-width: 575px) {
+  .transportSection{
+    padding: 1rem 1.5rem;
+  }
+
+  .routesTable th,
+  .routesTable td {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+}
+
+
+/* Breakpoints */
+
+@media (max-width: 575px) {
+  .heading {
+    font-size: 1.5rem;
+  }
+  .description, .routeList li {
+    font-size: 0.95rem;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .heading {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    flex-direction: column;
+  }
+  .rightImages {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .imageTop, .imageBottom {
+    width: 50%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .heading {
+    font-size: 2.2rem;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .heading {
+    font-size: 2.4rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .heading {
+    font-size: 2.6rem;
+  }
+}

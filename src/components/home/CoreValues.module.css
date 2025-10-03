@@ -1,0 +1,221 @@
+.coreValuesSection {
+  position: relative;
+  background-color: #f9f9f9;
+  padding: 4rem 1rem;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.leftContent {
+  flex: 1 1 500px;
+  max-width: 600px;
+  position: relative;
+}
+
+.rightImage {
+  flex: 1 1 500px;
+  display: flex;
+  justify-content: center;
+}
+
+.rightImage img {
+  width: 100%;
+  max-width: 100%;
+  height: 450px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* Heading & Description */
+.why {
+  display: inline-block;
+  font-size: 0.875rem;
+  color: #f28b30;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #1e6f72;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* Grid Core Values */
+.gridValues {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.valueBox {
+  background: #fff;
+  border-left: 5px solid #1e6f72;
+  border-radius: 10px;
+  padding: 0.5rem 1rem 0.5rem 1.5rem;
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.checkIcon {
+  color: #1e6f72;
+  font-size: 2.2rem;
+  margin-top: 0.3rem;
+}
+
+.valueTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.valueDesc {
+  font-size: 0.95rem;
+  color: #666;
+  margin-top: 0.25rem;
+}
+
+/* Button */
+.button {
+  background-color: #00b89f;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background-color: #009e8a;
+}
+
+/* Decorative Images */
+.birds,
+.car,
+.rainbow,
+.splash,
+.lines {
+  position: absolute;
+  z-index: 1;
+}
+
+.birds {
+  top: 0;
+  left: 0;
+  width: 150px;
+}
+
+.car {
+  top: 40px;
+  left: 350px;
+  width: 50px;
+}
+
+.rainbow {
+  bottom: -10px;
+  left: 30px;
+  width: 100px;
+}
+
+.splash {
+  top: 50px;
+  right: 60px;
+  width: 100px;
+}
+
+.lines {
+  bottom: 50px;
+  right: 60px;
+  width: 60px;
+}
+
+/* Responsive Layout */
+@media (max-width: 1399px) {
+  .title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 1199px) {
+ .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .rightImage {
+    margin-top: 2rem;
+  }
+
+  .valueBox {
+    text-align: left;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 576px) {
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .valueTitle {
+    font-size: 1rem;
+  }
+
+  .valueDesc {
+    font-size: 0.9rem;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .birds,
+  .car,
+  .splash,
+  .lines {
+    display: none;
+  }
+
+  .rainbow {
+    bottom: 0;
+    left: 10px;
+    width: 80px;
+  }
+}
